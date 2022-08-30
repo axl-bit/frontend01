@@ -1,0 +1,45 @@
+<div style="width: 400px; margin: auto">
+  <h4>Nuevo Distrito</h4>
+
+  <form>
+    <div class="form-group">
+      <label for="distrito">Distrito nuevo:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="distrito"
+        [(ngModel)]="distritosnuevo.distrito"
+        name="distrito"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_tarifa">Tarifa</label>
+      <br>
+      <select name="id_tarifa" [(ngModel)]="distritosnuevo.tarifa" >
+        <option [ngValue]="item" *ngFor="let item of tarifas">{{item.tarifa}}</option>
+      </select>
+    </div>
+  </form>
+  <br />
+  <div class="form-group" align="right">
+    <button
+      type="submit"
+      class="btn btn-outline-secondary"
+      (click)="creardistrito()"
+    >
+      crear
+    </button>
+
+    <button
+      type="submit"
+      class="m-3 btn btn-outline-danger"
+      (click)="regresar()"
+    >
+      regresar
+    </button>
+  </div>
+
+  <p>{{ mensaje }}</p>
+
+  <div *ngIf="!distritosnuevo"></div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container mt-5">
+
+  <h1>Listado de Distritos</h1>
+
+  <hr>
+
+  <table class="table" border="1">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Distrito</th>
+        <th>tarifa</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dis of Distritos">
+        <td>{{dis.distritoID}}</td>
+        <td>{{dis.distrito}}</td>
+        <td>{{dis.tarifa.tarifa}}</td>
+        <td>
+          <button class="btn btn-outline-info" [routerLink]="['/Distrito/actualizar/', dis.distritoID]">Editar</button>
+          <button class="btn btn-outline-danger" style="margin-left: 5px;" (click)="borrardistrito(dis.distritoID)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div align="right">
+    <button class="btn btn-outline-success" type="button" [routerLink]="'/Distrito/crear'">Nuevo distrito</button>
+  </div>
+
+
+</div>

@@ -1,0 +1,39 @@
+<div style="width: 400px; margin: auto">
+  <h4>Nueva Tarifa</h4>
+
+  <form>
+    <div class="form-group">
+      <label for="tarifa">Tarifa</label>
+      <input
+        type="text"
+        class="form-control"
+        id="tarifa"
+        [(ngModel)]="tarifaNueva.tarifa"
+        name="tarifa"
+      />
+    </div>
+  </form>
+  <br />
+  <div class="form-group" align="right">
+    <button
+      type="submit"
+      class="btn btn-outline-secondary"
+      (click)="creartarifa()"
+    >
+      crear
+    </button>
+
+    <button
+      type="submit"
+      class="m-3 btn btn-outline-danger"
+      (click)="regresar()"
+    >
+      regresar
+    </button>
+  </div>
+
+  <p>{{ mensaje }}</p>
+
+  <div *ngIf="!tarifaNueva"></div>
+</div>
+

@@ -1,0 +1,31 @@
+<div class="container mt-5">
+
+  <h1>Listado de Tarifas</h1>
+
+  <hr>
+
+  <table class="table" border="1">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>tarifa</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor=" let tarifas of tarifas">
+        <td> {{tarifas.tarifaID}} </td>
+        <td> {{tarifas.tarifa}} </td>
+        <td>
+          <button class="btn btn-outline-info"  [routerLink]="['/tarfias/actualizar/', tarifas.tarifaID]">Editar</button>
+          <button class="btn btn-outline-danger" style="margin-left: 5px;" (click)="borrartarifa(tarifas.tarifaID)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div align="right">
+    <button class="btn btn-outline-success" type="button" [routerLink]="'/tarifas/crear'">Nueva Tarifa</button>
+  </div>
+
+
+</div>

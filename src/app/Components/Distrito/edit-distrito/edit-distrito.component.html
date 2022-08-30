@@ -1,0 +1,56 @@
+<div style="width: 400px; margin: auto;">
+
+  <div *ngIf="distritoActual"  class="edit-form">
+    <h4>Actualizar Tarifa</h4>
+    <form>
+
+      <div class="form-group">
+        <label for="distrito">Distrito nuevo:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="distrito"
+          [(ngModel)]="distritoActual.distrito"
+          name="distrito"
+        />
+      </div>
+      <div class="form-group">
+        <label for="id_tarifa">Tarifa</label>
+        <br>
+        <select name="id_tarifa" [(ngModel)]="distritoActual.tarifa" >
+          <option [ngValue]="item" *ngFor="let item of tarifas">{{item.tarifa}}</option>
+        </select>
+      </div>
+    </form>
+
+    <br>
+
+    <div>
+      <button
+      type="submit"
+      class="btn btn-success"
+      (click)="ActualizarDistrito()"
+      >
+        Actualizar
+      </button>
+
+      <button
+      type="submit"
+      class="btn btn-secondary"
+      style="margin-left: 5px;"
+      (click)="regresar()"
+      >
+        Regresar
+      </button>
+
+      <p>{{mensaje}}</p>
+    </div>
+
+    <div *ngIf="!distritoActual">
+      <br>
+      <p>Accediendo a la tarifa</p>
+    </div>
+
+  </div>
+
+</div>

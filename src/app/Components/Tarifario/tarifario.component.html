@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <div class="item">
+    <h1>Distritos y sus tarifas</h1>
+
+    <hr />
+
+    <table class="table" border="1">
+      <thead>
+        <tr>
+          <th>Distrito</th>
+          <th>tarifa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dis of Distritos">
+          <td>{{ dis.distrito }}</td>
+          <td>{{ dis.tarifa.tarifa }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="item">
+    <!-- google-maps-demo.component.html -->
+    <google-map
+      height="400px"
+      width="750px"
+      [center]="center"
+      [zoom]="zoom"
+      (mapClick)="moveMap($event)"
+      (mapMousemove)="move($event)"
+    >
+    </google-map>
+  </div>
+</div>
