@@ -7,12 +7,19 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { httpInterceptorProviders } from './Helpers/http.interceptor';
 
 //Pagina de inicio
 import { PagInicioComponent } from './Components/pag-inicio/pag-inicio.component';
 
 //Login
 import { LoginComponent } from './Components/Login/login.component';
+
+//profile
+import { ProfileComponent } from './Components/profile/profile.component';
+
+//Tarifario
+import { TarifarioComponent } from './Components/Tarifario/tarifario.component';
 
 //tarifa
 import { ListTarifaComponent } from './Components/Tarifa/list-tarifa/list-tarifa.component';
@@ -23,7 +30,13 @@ import { AddTarifaComponent } from './Components/Tarifa/add-tarifa/add-tarifa.co
 import { ListDistritoComponent } from './Components/Distrito/list-distrito/list-distrito.component';
 import { AddDistritoComponent } from './Components/Distrito/add-distrito/add-distrito.component';
 import { EditDistritoComponent } from './Components/Distrito/edit-distrito/edit-distrito.component';
-import { TarifarioComponent } from './Components/Tarifario/tarifario.component';
+
+//Provincias
+import { ListProvinciaComponent } from './Components/Provincia/list-provincia/list-provincia.component';
+import { EditProvinciaComponent } from './Components/Provincia/edit-provincia/edit-provincia.component';
+import { AddProvinciaComponent } from './Components/Provincia/add-provincia/add-provincia.component';
+
+
 
 
 
@@ -40,6 +53,10 @@ import { TarifarioComponent } from './Components/Tarifario/tarifario.component';
     LoginComponent,
     PagInicioComponent,
     TarifarioComponent,
+    ListProvinciaComponent,
+    EditProvinciaComponent,
+    AddProvinciaComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,8 +65,7 @@ import { TarifarioComponent } from './Components/Tarifario/tarifario.component';
     FormsModule,
     GoogleMapsModule
   ],
-  providers: [
-  ],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -23,7 +23,7 @@ export class ListTarifaComponent implements OnInit {
     //este es el metodo donde se inician los componentes a cargar para la visualizacion
 
     console.log("Iniciando componente de listado")
-    this.listarTarifas(),
+    this.listarTarifas()
     console.log("fin de la invocacion")
     console.log("fin de carga de componentes")
 

@@ -5,6 +5,7 @@ import { EditDistritoComponent } from './Components/Distrito/edit-distrito/edit-
 import { ListDistritoComponent } from './Components/Distrito/list-distrito/list-distrito.component';
 import { LoginComponent } from './Components/Login/login.component';
 import { PagInicioComponent } from './Components/pag-inicio/pag-inicio.component';
+import { ProfileComponent } from './Components/profile/profile.component';
 import { AddTarifaComponent } from './Components/Tarifa/add-tarifa/add-tarifa.component';
 import { EditTarifaComponent } from './Components/Tarifa/edit-tarifa/edit-tarifa.component';
 import { ListTarifaComponent } from './Components/Tarifa/list-tarifa/list-tarifa.component';
@@ -19,6 +20,9 @@ const routes: Routes = [
   //Login
   {path: 'Login', component:LoginComponent},
 
+  //profile
+  {path: 'profile', component:ProfileComponent},
+
   //Tarifario
   {path: 'Tarifario', component:TarifarioComponent},
 
@@ -30,7 +34,8 @@ const routes: Routes = [
   //Distrito
   {path: 'Distrito', component: ListDistritoComponent},
   {path: 'Distrito/crear', component: AddDistritoComponent},
-  {path: 'Distrito/actualizar/:id', component: EditDistritoComponent}
+  {path: 'Distrito/actualizar/:id', component: EditDistritoComponent},
+
 
 
 ];

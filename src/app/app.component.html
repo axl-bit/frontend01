@@ -10,28 +10,44 @@
   <!-- ************************************ -->
   <!-- inicio de la barra de navegación -->
   <!-- ************************************ -->
-  <div class="card text-center">
-    <div class="card-header">
-      <ul class="nav nav-tabs card-header-tabs">
+  <div id="app">
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a href="#" class="navbar-brand" [routerLink]="'/Inicio'">Pmmcourier</a>
+      <ul class="navbar-nav mr-auto" routerLinkActive="active">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/Inicio'">Inicio</a>
+          <a href="#" class="nav-link" [routerLink]="'/Tarifario'">Tarifario </a>
+        </li>
+        <li class="nav-item" ><!--*ngIf="showAdminBoard"-->
+          <a href="#" class="nav-link" [routerLink]="'/tarifas'">Tarifas</a>
+        </li>
+        <li class="nav-item" > <!--*ngIf="showAdminBoard"-->
+          <a href="#" class="nav-link" [routerLink]="'/Distrito'">Distrito</a>
+        </li>
+        <!--
+        <li class="nav-item">
+          <a href="#" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+        </li>-->
+      </ul>
+
+      <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+        <li class="nav-item">
+          <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/Tarifario'">Tarifario</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/Login'">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/tarifas'">Tarifas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/Distrito'">Distrito</a>
+          <a href="/login" class="nav-link" [routerLink]="'/Login'">Login</a>
         </li>
       </ul>
-    </div>
+
+      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+        <li class="nav-item">
+          <a href="/profile" class="nav-link" [routerLink]="'/profile'">{{ username }}</a>
+        </li>
+        <li class="nav-item">
+          <a href class="nav-link" (click)="logout()">LogOut</a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <br>
   <!-- ************************************ -->
   <!-- Fin de la barra de navegación -->
   <!-- ************************************ -->
