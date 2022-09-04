@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Tarifas } from 'src/app/Models/tarifa';
+import { StorageService } from 'src/app/Service/Login/storage.service';
 import { ServiceTarifaService } from 'src/app/Service/tarifa/service-tarifa.service';
 
 @Component({
@@ -11,11 +12,12 @@ import { ServiceTarifaService } from 'src/app/Service/tarifa/service-tarifa.serv
 export class ListTarifaComponent implements OnInit {
 
   //traemos el modelo para las tarifas
-  tarifas : Tarifas[] | undefined;
+  tarifas: Tarifas[] | undefined;
 
   constructor(
     private tarifaService: ServiceTarifaService,
-    private router: Router
+    private router: Router,
+    private storagetoken: StorageService
   ) { }
 
   ngOnInit(): void {
@@ -29,9 +31,9 @@ export class ListTarifaComponent implements OnInit {
 
   }
 
-  listarTarifas(){
+  listarTarifas() {
     console.log("Invocando servicio rest de tarifas")
-    this.tarifaService.getTarifaList().subscribe(data =>{
+    this.tarifaService.getTarifaList().subscribe(data => {
       console.log("llegaron los datos")
       console.log(data);
       this.tarifas = data;
@@ -39,19 +41,17 @@ export class ListTarifaComponent implements OnInit {
     })
   }
 
-  borrartarifa(id: string){
+  borrartarifa(id: string) {
     console.log("Invocando servicio rest-delete");
-    this.tarifaService.deleteTarifa(id).subscribe(data =>{
+    this.tarifaService.deleteTarifa(id).subscribe(data => {
       console.log(data);
       this.ngOnInit();
       this.router.navigate(['/tarifas']);
 
     },
-    error => {
-    console.log(error);
-  })
-}
-
-
+      error => {
+        console.log(error);
+      })
+  }
 
 }

@@ -21,13 +21,17 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService, private storageService: StorageService) { }
 
   ngOnInit(): void {
+    /*
     if (this.storageService.isLoggedIn()) {
       this.isLoggedIn = true;
       this.roles = this.storageService.getUser().roles;
+    }*/
+    if (this.storageService.getToken()) {
+      this.isLoggedIn = true;
     }
   }
 
-
+/*
   onSubmit(): void {
     const { username, password } = this.form;
 
@@ -46,14 +50,14 @@ export class LoginComponent implements OnInit {
       }
     });
   }
-/*
+*/
   onSubmit() {
 
     const { username, password } = this.form;
 
     return this.authService.login(username, password).subscribe(data => {
-      this.storageService.saveToken(data.token);
-      this.storageService.saveUser(data);
+      this.storageService.saveToken(data.jwttoken);
+      this.storageService.saveUser(data.sub);
       this.isLoggedIn = true;
       this.reloadPage();
     }, error => {
@@ -61,7 +65,7 @@ export class LoginComponent implements OnInit {
       this.isLoginFailed = true;
     });
   }
-*/
+
   reloadPage(): void {
     window.location.reload();
   }

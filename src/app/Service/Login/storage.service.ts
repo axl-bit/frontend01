@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-const USER_KEY = 'auth-user';
 const TOKEN_KEY = 'auth-token';
+const USER_KEY = 'auth-user';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +28,7 @@ export class StorageService {
 
     return {};
   }
-*/
+
   public isLoggedIn(): boolean {
     const user = window.sessionStorage.getItem(USER_KEY);
     if (user) {
@@ -36,7 +36,7 @@ export class StorageService {
     }
 
     return false;
-  }
+  }*/
 
   signOut(): void {
     window.sessionStorage.clear();
@@ -61,6 +61,8 @@ export class StorageService {
     if (user) {
       return JSON.parse(user);
     }
-  }
+
+    return {};
+}
 
 }

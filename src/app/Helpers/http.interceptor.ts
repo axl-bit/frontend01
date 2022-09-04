@@ -3,7 +3,6 @@ import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HTTP_INTERCEPTORS
 import { Observable } from 'rxjs';
 import { StorageService } from '../Service/Login/storage.service';
 
-const TOKEN_HEADER_KEY = 'Authorization';
 
 @Injectable()
 export class HttpRequestInterceptor implements HttpInterceptor {
@@ -14,11 +13,13 @@ export class HttpRequestInterceptor implements HttpInterceptor {
 
     let authReq = req;
     const token = this.tokenService.getToken();
+    console.log("enviando token: "+ token);
     if (token != null) {
-      authReq = req.clone({ headers: req.headers.set(TOKEN_HEADER_KEY, 'Bearer ' + token) });
+      authReq = req.clone({ headers: req.headers.set('Authorization', 'Bearer ' + token) });
     }
     return next.handle(authReq);
   }
+
 }
 
 export const httpInterceptorProviders = [

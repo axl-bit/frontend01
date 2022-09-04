@@ -19,6 +19,7 @@ export class AppComponent {
   constructor(private storageService: StorageService, private authService: AuthService) { }
 
   ngOnInit(): void {
+    /*
     this.isLoggedIn = this.storageService.isLoggedIn();
 
     if (this.isLoggedIn) {
@@ -29,6 +30,13 @@ export class AppComponent {
       this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
 
       this.username = user.username;
+    }*/
+
+    this.isLoggedIn = !!this.storageService.getToken();
+    if (this.isLoggedIn) {
+      this.isLoggedIn = true;
+      //const user = this.storageService.getUser();
+      //this.username = user.username;
     }
   }
 /*

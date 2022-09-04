@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RespuestaCommon } from 'src/app/Models/respuesta';
 import { Tarifas } from 'src/app/Models/tarifa';
+import { StorageService } from 'src/app/Service/Login/storage.service';
 import { ServiceTarifaService } from 'src/app/Service/tarifa/service-tarifa.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class AddTarifaComponent implements OnInit {
 
   constructor(
     private tarifaService: ServiceTarifaService,
-    private router: Router
+    private router: Router,
+    private storagetoken: StorageService
   ) { }
 
   ngOnInit(): void {
@@ -38,8 +40,10 @@ export class AddTarifaComponent implements OnInit {
     },
     error => {
       console.log(error);
-      this.mensaje = "Hubo un error creando la tarifanom";
+      this.mensaje = "Hubo un error creando la tarifa";
+
     })
   }
+
 
 }
