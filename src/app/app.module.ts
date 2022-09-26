@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { httpInterceptorProviders } from './Helpers/http.interceptor';
 
+//Barra
+import { BarraComponent } from './Components/barra/barra.component';
+
 //Pagina de inicio
 import { PagInicioComponent } from './Components/pag-inicio/pag-inicio.component';
 
@@ -36,6 +39,20 @@ import { ListProvinciaComponent } from './Components/Provincia/list-provincia/li
 import { EditProvinciaComponent } from './Components/Provincia/edit-provincia/edit-provincia.component';
 import { AddProvinciaComponent } from './Components/Provincia/add-provincia/add-provincia.component';
 
+//Colaborador
+import { ListColaboradorComponent } from './Components/Colaborador/list-colaborador/list-colaborador.component';
+import { AddColaboradorComponent } from './Components/Colaborador/add-colaborador/add-colaborador.component';
+import { EditColaboradorComponent } from './Components/Colaborador/edit-colaborador/edit-colaborador.component';
+
+
+//OrdenServicio
+import { ListOrdenservicioComponent } from './Components/OrdenServicio/list-ordenservicio/list-ordenservicio.component';
+import { AddOrdenservicioComponent } from './Components/OrdenServicio/add-ordenservicio/add-ordenservicio.component';
+import { EditOrdenservicioComponent } from './Components/OrdenServicio/edit-ordenservicio/edit-ordenservicio.component';
+import { AddMotorizadoComponent } from './Components/Motorizado/add-motorizado/add-motorizado.component';
+import { ListMotorizadoComponent } from './Components/Motorizado/list-motorizado/list-motorizado.component';
+import { EditMotorizadoComponent } from './Components/Motorizado/edit-motorizado/edit-motorizado.component';
+
 
 
 
@@ -57,6 +74,16 @@ import { AddProvinciaComponent } from './Components/Provincia/add-provincia/add-
     EditProvinciaComponent,
     AddProvinciaComponent,
     ProfileComponent,
+    ListColaboradorComponent,
+    AddColaboradorComponent,
+    EditColaboradorComponent,
+    BarraComponent,
+    ListOrdenservicioComponent,
+    AddOrdenservicioComponent,
+    EditOrdenservicioComponent,
+    AddMotorizadoComponent,
+    ListMotorizadoComponent,
+    EditMotorizadoComponent,
   ],
   imports: [
     BrowserModule,

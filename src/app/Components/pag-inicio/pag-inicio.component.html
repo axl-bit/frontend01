@@ -1,34 +1,126 @@
-<!-- About Section -->
-<div class="section" id="about">
-  <h3 class="w3-center">ACERCA DE NOSOTROS</h3>
-
-  <div class="row">
-  <div class="column">
 
 
-    <i class="w3-jumbo" >
-     <img src="/imagenes/vision.png" class="w3-image w3-greyscale" style="width:20%">
-    </i>
+<!doctype html>
+<html>
 
-     <p class="w3-large">Vision🛵</p>
-      <p>
-        Ser líderes en Lima y Callao destacando en el rubro logístico siendo parte objetivamente y responsablemente de resolver y atender todas las necesidades de
-         envíos de nuestros clientes con el fin de ser la mejor empresa courier que brinda servicios con importancia humana,empatía y eficacia.
-      </p>
+<head>
+  <meta charset="utf-8">
+  <title>Frontend01</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFaXNvUSNlqQoqlNBgCgppWcSeYxb5kDM"></script>
 
-    <div class="column">
-      <i class="w3-jumbo w3-center">
-        <img src="/imagenes/compromiso.png" class="w3-image w3-greyscale" style="width:20%">
-      </i>
-      <p class="w3-large">Compromiso🛵</p>
-      <p>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="pag-inicio.component.css">
 
-        Que PMM Courier sea reconocida como una empresa de Clase Nacional, dando soluciones logísticas de alta calidad,
-         contando con el compromiso de nuestra propia flota terrestre en el ámbito nacional mediante sucursales propias
-          y franquicias, basadas en la filosofía de servicio con responsabilidad social y preservación del medio ambiente.
+</head>
+<body>
+  <!--ENCABEZADO-->
+  <header id="header">
+    <div class="header_top clearfix affix-top">
+      <div class="container">
+        <div class="header_socials">
+          <a target="_blank" href="https://www.facebook.com/pmmcourier"><i class="fa fa-facebook"></i></a>
+          <a target="_blank" href="https://www.instagram.com/pmmcourier.oficial/"><i class="fa fa-instagram"></i></a>
+        </div>
+        <div class="logo typing">PMM COURIER</div>
+      </div>
+      <div class="top_nav affix-top">
+        <div class="container">
+          <div class="top_nav_wrapper clearfix">
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="navbar-brand" [routerLink]="'/Inicio'">Pmmcourier</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" [routerLink]="'/Tarifario'">Tarifario </a>
+              </li>
+              <li class="nav-item" >
+                <!--*ngIf="showAdminBoard"-->
+                <a href="#" class="nav-link" [routerLink]="'/OrdenServicio/crear'">Servicio</a>
+              </li>
+            </ul>
+            <div class="icon_text clearfix">
+              <div class="icon"><i class="fa fa fa-phone"></i></div>
+              <div class="text"><strong>+51 942 087 247</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile_header">
+          <div class="logo_wrapper clearfix">
+            <div id="menu_toggle">
+              <button></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--ACORDEON DE IMAGENES-->
+  <section>
+    <div class="ul-acordeon">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
 
-      </p>
+    <!-- Menu Section -->
+  </section>
 
+  <section class="py-5 py-lg-5 bg-black"
+    style="background-color: rgb(129, 178, 233) !important; --darkreader-inline-bgcolor:#235fdf;"
+    data-darkreader-inline-bgcolor="">
+    <div class="container py-lg-5">
+      <div class="row">
+        <div>
+          <div style="background-color: rgb(87, 148, 218) !important; --darkreader-inline-bgcolor:#235fdf;"
+            data-darkreader-inline-bgcolor="" id="about">
+            <h3 class="w3-center">ACERCA DE NOSOTROS</h3>
+            <div class="center">
+              <div class="column">
+                <i class="w3-jumbo">
+                  <img src="/imagenes/vision.png" class="w3-image w3-greyscale" style="width:20%">
+                </i>
+                <p class="w3-large center">Vision🛵</p>
+                <p class="center">
+                  Ser líderes en Lima y Callao destacando en el rubro logístico siendo parte objetivamente y
+                  responsablemente de resolver y atender todas las necesidades de
+                  envíos de nuestros clientes con el fin de ser la mejor empresa courier que brinda servicios con
+                  importancia humana,empatía y eficacia.
+                </p>
+              </div>
+              <div class="column">
+                <i class="w3-jumbo w3-center">
+                  <img src="/imagenes/compromiso.png" class="w3-image w3-greyscale" style="width:20%">
+                </i>
+                <p class="w3-large center">Compromiso🛵</p>
+                <p class="center">
+
+                  Que PMM Courier sea reconocida como una empresa de Clase Nacional, dando soluciones logísticas de
+                  alta
+                  calidad,
+                  contando con el compromiso de nuestra propia flota terrestre en el ámbito nacional mediante
+                  sucursales
+                  propias
+                  y franquicias, basadas en la filosofía de servicio con responsabilidad social y preservación del
+                  medio
+                  ambiente.
+                </p>
+
+              </div>
               <div class="column">
                 <i class=" w3-jumbo">
                   <img src="/imagenes/objetivo.png" class="w3-image w3-greyscale" style="width:20%">
@@ -36,160 +128,113 @@
                 <p class="w3-large">
                   Misión🛵
                 </p>
-                <p>
-                  Establecer una relación de confianza y eficacia atendiendo todas las solicitudes de envío de nuestros clientes,
-                   ofreciendo transporte de encomiendas, documentación jurídica y administrativa, con precios accesibles,siendo parte
-                    de su logro y éxito.
+                <p class="center">
+                  Establecer una relación de confianza y eficacia atendiendo todas las solicitudes de envío de
+                  nuestros
+                  clientes,
+                  ofreciendo transporte de encomiendas, documentación jurídica y administrativa, con precios
+                  accesibles,siendo parte
+                  de su logro y éxito.
                 </p>
-
-</div>
-
-
-    <!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>P.M.M COURIER SERVICIOS GENERALES EIRL especializada en ACTIVIDADES DE MENSAJERÍA.</h3>
-      <p>Fue creada y fundada el 01/10/2019,
-        <br>registrada dentro de las sociedades mercantiles y comerciales<br>
-        como una EMPRESA INDIVIDUAL DE RESP. LTDA<br>
-      </p>
-
-    </div>
-    <div class="w3-col m6">
-      <img class="w3-image  w3-round-large" src="https://scontent.flim29-1.fna.fbcdn.net/v/t1.6435-9/163537201_511353850269481_8672952354679463524_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeELjdpsHsUEJ2bHQ-xTIIEBMaMRcaPNBPwxoxFxo80E_IHG8p4u3kpwzzOhF71PIXQmVRGTk5lrhlTiZI5jJFLk&_nc_ohc=p6fjNyjB76oAX_w3oEc&_nc_ht=scontent.flim29-1.fna&oh=00_AT_bWDrweGhUtkNsEp8wQ-qzcEgWKVPFNO7v7mF2FiVSyg&oe=632D3C7B"
-       alt="working" width="250" height="194">
-    </div>
-  </div>
-</div>
-
-
-    <!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-    <!-- Skills Section METODO DE PAGO -->
-<div class="w3-container w3-light-grey w3-padding-64">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Metodo de Pago</h3>
-      <p>Atraves de nuestro canal de atencion via WhatsApp envie el comprobante de pago, siendo este el vaucher generado  en cualquier entidad financiera<br>
-         oh a traves de su banca movil.</p>
-
-    </div>
-    <div class="w3-col m6">
-      <p class="w3-wide"><i class=""></i>Cuenta Corriente BBVA</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:50%">#########################</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="w3-wide"><i class=""></i>Cuenta Corriente Scotiabank</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:50%">#########################</div>
+    </div>
+
+  </section>
+  <!-- Skills Section METODO DE PAGO -->
+  <div class="w3-container w3-dark-grey  w3-padding-64">
+    <div class="w3-row-padding">
+      <div class="w3-col m6">
+        <h3><strong>Metodo de Pago</strong></h3>
+        <p>Atraves de nuestro canal de atencion via WhatsApp envie el comprobante de pago, siendo este el vaucher
+          generado en cualquier entidad financiera<br>
+          oh a traves de su banca movil.</p>
+
       </div>
-      <p class="w3-wide"><i class="">
-        </i>Cuenta Corriente BCP</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:50%">#########################</div>
+      <div class="w3-col m6">
+        <p class="w3-wide"><i class=""></i>Cuenta Corriente BBVA</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-light-grey w3-center" style="width:50%">#########################</div>
+        </div>
+        <p class="w3-wide"><i class=""></i>Cuenta Corriente Scotiabank</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-light-grey w3-center" style="width:50%">#########################</div>
+        </div>
+        <p class="w3-wide"><i class="">
+          </i>Cuenta Corriente BCP</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-light-grey w3-center" style="width:50%">#########################</div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-</div>
-<!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTACTO</h3>
-  <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Perú 150135 San Martín de Porres, Peru</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Telefono: +51 942 087 247</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: pmmcourier@gmail.com</p>
-    <br>
-      <div class="f36a8esv ln5ckyug o3m1n7fs s8sjc6am nch0832m r5g9zsuq r227ecj6 q46jt4gp j9wl0w85 jgcidaqu ta68dy8c kpwa50dg m0cukt09 h8391g91 k0kqjr44">
-        <div class="alzwoclg"><div><div class="qgrdou9d nu7423ey frfouenu bonavkto djs4p424 r7bn319e bdao358l aglvbi8b m8h3af8h l7ghb35v kjdc1dyq kmwttqpk srn514ro oxkhqvkx rl78xhln nch0832m om3e55n1 cr00lzj9 mfclru0v"><div class="alzwoclg cqf1kptm r5g9zsuq q46jt4gp"><div class="bdao358l om3e55n1 g4tp4svg alzwoclg jez8cy9q t5n4vrf6 hael596l sr926ui1 jl2a5g8c r227ecj6 gt60zsk1 srn514ro nuznn79q snu7ymun ktovzxj4 g1smwn4j"><div class="bdao358l om3e55n1 g4tp4svg alzwoclg cqf1kptm jez8cy9q gvxzyvdx aeinzg81 i5oewl5a nnzkd6d7 bmgto6uh f9xcifuu"><i data-visualcompletion="css-img" class="gneimcpu jh1b95t1" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/Raln_viRofn.png?_nc_eui2=AeH1c8lORWvi9GVVJUUOivApTujW9xE5vGxO6Nb3ETm8bI0WHEtZjoTLcOG5HUpkrze6Hms9HSuJ72hFjExTnFRM&quot;); background-position: 0px -1082px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i></div><div class="bdao358l om3e55n1 g4tp4svg alzwoclg cqf1kptm gvxzyvdx aeinzg81 jg3vgc78 cgu29s5g i15ihif8 gb2oqlaf i5oewl5a nnzkd6d7 bmgto6uh f9xcifuu"><div class="alzwoclg cqf1kptm siwo0mpr gu5uzgus"><div class="jroqu855 nthtkgg5"><span class="gvxzyvdx aeinzg81 t7p7dqev gh25dzvf exr7barw b6ax4al1 gem102v4 ncib64c9 mrvwc6qr sx8pxkcf f597kf1v cpcgwwas m2nijcs8 hxfwr5lz k1z55t6l oog5qr5w tes86rjd pbevjfx6 ztn2w49o" dir="auto"><a class="qi72231t nu7423ey n3hqoq4p r86q59rh b3qcqh3k fq87ekyn bdao358l fsf7x5fv rse6dlih s5oniofx m8h3af8h l7ghb35v kjdc1dyq kmwttqpk srn514ro oxkhqvkx rl78xhln nch0832m cr00lzj9 rn8ck1ys s3jn8y49 icdlwmnq cxfqmxzd ezidihy3" href="https://www.google.com/maps/dir/?api=1&amp;destination=-11.994155531322%2C-77.11501121521&amp;fbclid=IwAR17LX7lAEm09Fqn1Gf-2qtIy2c6K_JOH8uDrkLFmWTV78gRWA3L3EFQWho" rel="nofollow" role="link" tabindex="0" target="_blank"><span class="gvxzyvdx aeinzg81 t7p7dqev gh25dzvf exr7barw k1z55t6l oog5qr5w tes86rjd ezidihy3"><span class="b6ax4al1 lq84ybu9 hf30pyar om3e55n1" style="-webkit-box-orient: vertical; -webkit-line-clamp: 5; display: -webkit-box;">Perú
-150135 San Martín de Porres, Peru
-<img src="/imagenes/mapaPMM.png" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
-
-</span></span>
-</a></span></div></div></div></div></div></div></div><div class="s1m0hq7j r227ecj6 p8zq7ayg alzwoclg"></div></div></div>
+  <div class="c-section c-section--curveFooter position-relative">
+    <div class="c-content--curved">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="c-img-width">
+        <path fill="rgb(255, 113, 119)" fill-opacity="1"
+          d="M0,192L120,165.3C240,139,480,85,720,85.3C960,85,1200,139,1320,165.3L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+          data-darkreader-inline-fill="" style="--darkreader-inline-fill:#247eeb;"></path>
+      </svg>
+    </div>
+    <div class="container__fluid">
+      <div class="row">
+        <div class="col s12 m12 l6">
+          <div>
+            <a href="hola" class='ipad'>Generar Nueva Orden</a>
+          </div>
+        </div>
+        <div class="offset-l1 col s12 m12 l5">
+          <div class="c-content--plataform c-box-shadow">
+            <h2 class="title">
+              Plataforma de envíos </h2>
+            <div class="c-section__paragraph">
+              <p>Donde las empresas y personas podrán programar sus envíos desde donde estén y de
+                manera sencilla. Sigue los siguientes pasos:</p>
+            </div>
+            <div class="c-section__list" style="margin: 30px 0px 0px;">
+              <ul>
+                <li style="position: relative;"><span class="order-list">
+                    1 </span> <span class="order-information c-content-vertical-align">
+                    <div>Ingresa a la plataforma</div>
+                  </span></li>
+                <li style="position: relative;"><span class="order-list">
+                    2 </span> <span class="order-information c-content-vertical-align">
+                    <div> Elige la opcion "Generar nueva orden"</div>
+                  </span></li>
+                <li style="position: relative;"><span class="order-list">
+                    3 </span> <span class="order-information c-content-vertical-align">
+                    <div> Completa los datos de tu envío y ¡LISTO!</div>
+                  </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Inicio</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-
-    <i class="fa fa-whatsapp w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-  </div>
-  <!--<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>-->
-</footer>
 
 
 
 
 
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64">
+    <div class="column center">
+      <h3 class="w3-center">CONTACTO</h3>
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge"></i>Perú 150135 San Martín de Porres, Peru</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge"></i> Telefono: +51 942 087 247</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge"></i>  Email: pmmcourier@gmail.com</p>
+      <br>
+    </div>
+  </footer>
+  <app-root></app-root>
 
 
 
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-  // Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
+</html>

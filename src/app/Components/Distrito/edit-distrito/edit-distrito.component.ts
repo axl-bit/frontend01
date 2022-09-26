@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Distritos } from 'src/app/Models/Distrito';
+import { Provincia } from 'src/app/Models/Provincia';
 import { Tarifas } from 'src/app/Models/tarifa';
 import { DistritoService } from 'src/app/Service/distrito/distrito.service';
+import { ProvinciaService } from 'src/app/Service/Provincia/provincia.service';
 import { ServiceTarifaService } from 'src/app/Service/tarifa/service-tarifa.service';
 
 @Component({
@@ -14,11 +16,13 @@ export class EditDistritoComponent implements OnInit {
 
   distritoActual !: Distritos;
   tarifas: Tarifas[] | undefined;
+  provincias: Provincia[] | undefined;
   mensaje !: string;
 
   constructor(
     private distritoServicio: DistritoService,
     private tarifaservicio: ServiceTarifaService,
+    private provinciaservicio: ProvinciaService,
     private route : ActivatedRoute,
     private router: Router
   ) { }
@@ -30,6 +34,10 @@ export class EditDistritoComponent implements OnInit {
     this.tarifaservicio.getTarifaList().subscribe(data =>{
       console.log(data);
       this.tarifas = data;
+    })
+    this.provinciaservicio.getProvinciaList().subscribe(data =>{
+      console.log(data);
+      this.provincias = data;
     })
 
   }

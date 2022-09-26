@@ -1,3 +1,60 @@
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  <script src="Script.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="list-distrito.component.css"/>
+  </head>
+
+  <!--llamando al componente de barra-->
+  <app-barra></app-barra>
+
+  <div class="container mt-5">
+    <div class="wave"></div>
+    <div class="container">
+      <div class="table-wrapper">
+        <div class="table-title">
+          <div class="row">
+            <div class="col-sm-6">
+              <h2>LISTA DE<b> DISTRITOS</b></h2>
+            </div>
+          </div>
+        </div>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Provincia</th>
+              <th>Distrito</th>
+              <th>tarifa</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dis of Distritos">
+              <td>{{dis.distritoID}}</td>
+              <td>{{dis.provincia.provincia}}</td>
+              <td>{{dis.distrito}}</td>
+              <td>{{dis.tarifa.tarifa}}</td>
+              <td>
+                <button  class="btn btn-outline-info" [routerLink]="['/Distrito/actualizar/', dis.distritoID]">
+                  <i class="fa fa-edit"></i>
+                </button>
+                <button style="margin-left: 3px;" class="btn btn-outline-danger" (click)="borrardistrito(dis.distritoID)">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+          </tbody>
+        </table>
+        <div align="right">
+          <button class="btn btn-outline-success " type="button" [routerLink]="'/Distrito/crear'">Nuevo distrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--
 <div class="container mt-5">
 
   <h1>Listado de Distritos</h1>
@@ -8,6 +65,7 @@
     <thead>
       <tr>
         <th>Id</th>
+        <th>Provincia</th>
         <th>Distrito</th>
         <th>tarifa</th>
         <th>Acciones</th>
@@ -16,6 +74,7 @@
     <tbody>
       <tr *ngFor="let dis of Distritos">
         <td>{{dis.distritoID}}</td>
+        <td>{{dis.provincia.provincia}}</td>
         <td>{{dis.distrito}}</td>
         <td>{{dis.tarifa.tarifa}}</td>
         <td>
@@ -31,3 +90,4 @@
 
 
 </div>
+-->

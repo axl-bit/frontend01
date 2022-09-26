@@ -36,7 +36,7 @@ export class AddTarifaComponent implements OnInit {
     this.tarifaService.saveTarifa(this.tarifaNueva).subscribe( data =>{
       console.log("Esta llegando la data");
       this.respuesta = data;
-      this.mensaje= this.respuesta.msjRespuesta;
+      this.mensaje= this.respuesta.mensaje;
     },
     error => {
       console.log(error);

@@ -1,0 +1,39 @@
+
+<!--llamando al componente de barra-->
+<app-barra></app-barra>
+
+<div class="container mt-5">
+
+  <h1>Listado de Distritos</h1>
+
+  <hr>
+
+  <table class="table" border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>DNI</th>
+        <th>Nombres y apellidos</th>
+        <th>Rol</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let col of Colaboradores">
+        <td>{{col.colaboradorID}}</td>
+        <td>{{col.dnicolaborador}}</td>
+        <td>{{col.nombreC}}</td>
+        <td>{{col.tipo_colaborador.tipo_colaborador}}</td>
+        <td>
+          <button class="btn btn-outline-info" [routerLink]="['/Colaborador/actualizar/', col.colaboradorID]">Editar</button>
+          <button class="btn btn-outline-danger" style="margin-left: 5px;" (click)="borrarColaborador(col.colaboradorID)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div align="right">
+    <button class="btn btn-outline-success" type="button" [routerLink]="'/Colaborador/crear'">Nuevo Colaborador</button>
+  </div>
+
+
+</div>

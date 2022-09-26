@@ -1,5 +1,213 @@
-.item{
-  margin: 1em;
-  padding: 1em;
-  float: left;
+body{
+  margin: 0px;
+  min-height: 100vh;
+  background-image: url(/imagenes/tarifa.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  font-family: 'Varela Round', sans-serif;
+}
+
+body:before{
+  content: "";
+  width:100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background:linear-gradient(90deg,#7ccbdd,#d38ee2);
+
+  opacity:0.9;
+  z-index: -1;
+}
+
+html {
+  font-family: 'Raleway', sans-serif;
+  height: 100%;
+  background: linear-gradient(to bottom, #D6DBDF, #85929E);
+  background-attachment: fixed;
+}
+
+.table-wrapper {
+  width: 70%;
+  max-width: 1000px;
+  border: 3px solid #5d6d7e;
+  margin: 20px auto;
+  display: table;
+}
+.table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.table-spanner {
+  width: 100%;
+  background-color: #4682B4;
+  display: flex;
+  font-size: 1.8em;
+  font-weight: normal;
+  margin: 0;
+}
+.table-spanner span {
+  margin: auto;
+}
+.thead {
+  display: table-header-group;
+  text-align: center;
+  font-size: 1.4em;
+}
+.thead .td {
+  background-color: #99a3a4;
+}
+.tbody {
+  display: table-row-group;
+}
+.tbody .td {
+  background-color: #edeff1;
+}
+.tr {
+  display: table-row;
+  border-top: 1px solid #5d6d7e;
+}
+.td {
+  display: table-cell;
+  padding: 10px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.td:nth-child(odd) {
+  border-right: 1px solid #5d6d7e;
+}
+.thead, .table-spanner {
+  color: white;
+}
+.td, .table-spanner {
+  height: 50px;
+}
+@media all and (min-width: 780px) {
+  .table-wrapper {
+      min-width: 700px;
+  }
+}
+@media all and (max-width: 779px) and (min-width: 480px) {
+  .table-wrapper {
+      min-width: 420px;
+  }
+}
+@media all and (max-width: 479px) {
+  .table-wrapper {
+      min-width: 300px;
+  }
+  .table * {
+      display: block;
+  }
+  .thead {
+      clip: rect(1px, 1px, 1px, 1px);
+      clip-path: inset(50%);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+  }
+  .td::before {
+      display: inline-block;
+      content: attr(data);
+      width: 50%;
+      padding: 5px;
+      height: 95%;
+  }
+  .td {
+      border-right: none !important;
+      border-top: 1px solid #5d6d7e;
+  }
+  .tr {
+      border-top: none;
+  }
+  .tr:nth-child(even) .td {
+      background-color: #99a3a4;
+      color: white;
+  }
+}
+.container {
+perspective: 1000px; /* Viewing distance */
+perspective-origin: 50% 100px; /* x, y viewing angle */
+}
+
+.axis {
+position: relative;
+width: 200px;
+height: 200px;
+transform-style: preserve-3d; /* Makes sides 3D-able as seen in the "translateX, Y or Z below */
+}
+
+.axis > div {
+position: absolute;
+width: inherit;
+height: inherit;
+}
+
+.front{
+transform: rotateY(0deg) translateZ(100px);
+}
+.back{
+transform: rotateY(180deg) translateZ(100px);
+}
+
+.right{
+transform: rotateY(90deg) translateZ(100px);
+}
+.left{
+transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top{
+transform: rotateX(-90deg) translateZ(-100px);
+}
+.bottom{
+transform: rotateX(90deg) translateZ(-100px);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATION */
+@keyframes spin {
+from { transform: rotateY(0); }
+to { transform: rotateY(360deg); }
+}
+.axis { animation: spin 30s infinite linear; }
+.axis > div {
+transition-delay: 0.5s;
+transition-duration: 5s;
+}
+.axis:hover > div {
+transform: rotateX(0deg) rotateY(0deg) translateZ(0px);
+}
+
+/* GENERAL STYLING */
+/* *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; } */
+
+.axis { margin: 50px auto; }
+.axis > div {
+background: rgba(255,255,255,0.1);
+box-shadow: inset 0 0 30px rgba(0,0,0,0.2);
+font-size: 20px;
+text-align: center;
+line-height: 200px;
+color: rgba(0,0,0,0.5);
+font-family: sans-serif;
+text-transform: uppercase;
 }

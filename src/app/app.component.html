@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,47 +8,48 @@
   <title>Document</title>
 </head>
 <body>
+
   <!-- ************************************ -->
   <!-- inicio de la barra de navegación -->
-  <!-- ************************************ -->
+  <!-- ************************************
   <div id="app">
     <nav class="navbar navbar-expand navbar-dark bg-dark">
       <a href="#" class="navbar-brand" [routerLink]="'/Inicio'">Pmmcourier</a>
       <ul class="navbar-nav mr-auto" routerLinkActive="active">
-        <li class="nav-item">
+
+        <li class="nav-item" *ngIf="!isLoggedIn">
           <a href="#" class="nav-link" [routerLink]="'/Tarifario'">Tarifario </a>
         </li>
-        <li class="nav-item" ><!--*ngIf="showAdminBoard"-->
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a href="#" class="nav-link" [routerLink]="''">Servicio</a>
+        </li>
+
+
+        <li class="nav-item" *ngIf="isLoggedIn">
           <a href="#" class="nav-link" [routerLink]="'/tarifas'">Tarifas</a>
         </li>
-        <li class="nav-item" > <!--*ngIf="showAdminBoard"-->
+        <li class="nav-item" *ngIf="isLoggedIn">
           <a href="#" class="nav-link" [routerLink]="'/Distrito'">Distrito</a>
         </li>
-        <!--
-        <li class="nav-item">
-          <a href="#" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
-        </li>-->
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a href="#" class="nav-link" [routerLink]="'/Colaborador'">Colaboradores</a>
+        </li>
       </ul>
 
       <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
         <li class="nav-item">
-          <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
-        </li>
-        <li class="nav-item">
-          <a href="/login" class="nav-link" [routerLink]="'/Login'">Login</a>
+          <a href="/login" class="nav-link" [routerLink]="'/Login'">Iniciar Session</a>
         </li>
       </ul>
 
       <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
         <li class="nav-item">
-          <a href="/profile" class="nav-link" [routerLink]="'/profile'">{{ username }}</a>
-        </li>
-        <li class="nav-item">
-          <a href class="nav-link" (click)="logout()">LogOut</a>
+          <a href class="nav-link" (click)="logout()">Salir</a>
         </li>
       </ul>
     </nav>
   </div>
+-->
   <!-- ************************************ -->
   <!-- Fin de la barra de navegación -->
   <!-- ************************************ -->
@@ -55,4 +57,5 @@
 
 </body>
 </html>
+
 <router-outlet></router-outlet>

@@ -1,0 +1,40 @@
+<div style="width: 400px; margin: auto;">
+
+  <div *ngIf="detalleservicioActual"  class="edit-form">
+    <h4>Actualizar Estado</h4>
+    <form>
+      <div class="form-group">
+        <label for="id_tarifa">Estado</label>
+        <br>
+        <select name="id_tarifa" [(ngModel)]="detalleservicioActual.estado" >
+          <option [ngValue]="item" *ngFor="let item of estados">{{item.estado}}</option>
+        </select>
+      </div>
+    </form>
+
+    <br>
+
+    <div>
+      <button
+      type="submit"
+      class="btn btn-success"
+      (click)="ActualizarDS()"
+      >
+        Actualizar
+      </button>
+
+      <button
+      type="submit"
+      class="btn btn-secondary"
+      style="margin-left: 5px;"
+      (click)="regresar()"
+      >
+        Regresar
+      </button>
+
+      <p>{{mensaje}}</p>
+    </div>
+
+  </div>
+
+</div>

@@ -1,7 +1,83 @@
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  <script src="Script.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="edit-distrito.component.css"/>
+  </head>
+
+
+  <div id="container">
+  <div *ngIf="distritoActual"  class="edit-form">
+    <h1>ACTUALIZAR TARIFA</h1>
+    <form>
+
+      <div class="form-group texto">
+        <label for="distrito">Distrito nuevo:</label>
+        <input
+          placeholder="Actualizar distrito"
+          type="text"
+          class="form-control texto"
+          id="distrito"
+          [(ngModel)]="distritoActual.distrito"
+          name="distrito"
+        />
+      </div>
+      <div class="form-group">
+        <label for="id_tarifa">Provincia</label>
+        <br>
+        <select name="id_tarifa" class="form-select"  [(ngModel)]="distritoActual.provincia" >
+          <option [ngValue]="item" *ngFor="let item of provincias">{{item.provincia}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="id_tarifa">Tarifa</label>
+        <br>
+        <select name="id_tarifa"  class="form-select" [(ngModel)]="distritoActual.tarifa" >
+          <option [ngValue]="item" *ngFor="let item of tarifas">{{item.tarifa}}</option>
+        </select>
+      </div>
+    </form>
+
+    <br>
+
+    <div align="center">
+      <button
+      type="submit"
+      class="btn btn-success"
+      (click)="ActualizarDistrito()"
+      >
+        Actualizar
+      </button>
+
+      <button
+      type="submit"
+      class="btn btn-secondary"
+      style="margin-left: 5px;"
+      (click)="regresar()"
+      >
+        Regresar
+      </button>
+
+      <p>{{mensaje}}</p>
+    </div>
+
+    <br>
+
+    <div *ngIf="!distritoActual">
+      <br>
+      <p>Accediendo a la tarifa</p>
+    </div>
+
+  </div>
+
+</div>
+<!--
 <div style="width: 400px; margin: auto;">
 
   <div *ngIf="distritoActual"  class="edit-form">
-    <h4>Actualizar Tarifa</h4>
+    <h4>Actualizar Distrito</h4>
     <form>
 
       <div class="form-group">
@@ -14,6 +90,15 @@
           name="distrito"
         />
       </div>
+
+      <div class="form-group">
+        <label for="id_tarifa">Provincia</label>
+        <br>
+        <select name="id_tarifa" [(ngModel)]="distritoActual.provincia" >
+          <option [ngValue]="item" *ngFor="let item of provincias">{{item.provincia}}</option>
+        </select>
+      </div>
+
       <div class="form-group">
         <label for="id_tarifa">Tarifa</label>
         <br>
@@ -54,3 +139,4 @@
   </div>
 
 </div>
+-->

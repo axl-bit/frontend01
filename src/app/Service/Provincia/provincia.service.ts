@@ -9,7 +9,7 @@ import { RespuestaCommon } from 'src/app/Models/respuesta'
 })
 export class ProvinciaService {
 
-  private urlServicioRest = 'http://localhost:8090/rest/Distrito';
+  private urlServicioRest = 'http://localhost:8090/rest/Provincia';
 
   constructor(private httpClient: HttpClient) { }
 

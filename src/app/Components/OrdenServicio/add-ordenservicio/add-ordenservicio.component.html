@@ -1,0 +1,390 @@
+<app-barra></app-barra>
+<br />
+<div class="container mt-2">
+  <h1 align="center">SERVICIO DE COURIER</h1>
+
+  <div class="paquete">
+    <form>
+      <div>
+        <u><h4>Datos de Paquetería</h4></u>
+        <br />
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Paquete</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar Descripcion"
+            id="paquete"
+            [(ngModel)]="paquetenuevo.descripcionpqt"
+            name="descripcionpqt"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Paquete</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar la cantidad"
+            id="paquete"
+            [(ngModel)]="paquetenuevo.cantidadpqt"
+            name="cantidadpqt"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Tipo de paquete</span
+          >
+          <select name="id_tarifa" [(ngModel)]="paquetenuevo.tipopqt">
+            <option [ngValue]="item" *ngFor="let item of tipopqt">
+              {{ item.tipoPQT }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </form>
+
+    <br />
+    <div class="form-group" align="right">
+      <button
+        type="submit"
+        class="btn btn-outline-secondary"
+        (click)="crearpaquete()"
+      >
+        crear
+      </button>
+    </div>
+
+    <div *ngIf="!paquetenuevo">
+      <p>{{ mensajepaquete }}</p>
+    </div>
+
+    <br />
+  </div>
+
+  <div class="ordenrecojo">
+    <form>
+      <div>
+        <u><h4>Orden de recojo</h4></u>
+        <h5>Datos del emisor</h5>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Paquete Codigo</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar el codigo del paquete"
+            id="paquete"
+            [(ngModel)]="paqueteb.paquete_id"
+            name="descripcionpqt"
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Emisor</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar DNI"
+            id="ordenrecojo"
+            [(ngModel)]="ordenrecojonuevo.dniEm"
+            name="dniEm"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Emisor</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar Nombres completos"
+            id="ordenrecojo"
+            [(ngModel)]="ordenrecojonuevo.nomComplEmisor"
+            name="nomComplEmisor"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Emisor</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar Numero de celular"
+            id="ordenrecojo"
+            [(ngModel)]="ordenrecojonuevo.celularEm"
+            name="celularEm"
+          />
+        </div>
+
+        <h5>Datos de recojo</h5>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Recojo</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar direccion de recojo"
+            id="ordenrecojo"
+            [(ngModel)]="ordenrecojonuevo.direccionR"
+            name="direccionR"
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <label for="fecha recojo">Ingrese la fehca para el recojo: </label>
+          <input
+            type="date"
+            id="ordenrecojo"
+            [(ngModel)]="ordenrecojonuevo.fechaR"
+            name="fecha_recojo"
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Distrito recojo</span
+          >
+          <select name="id_tarifa" [(ngModel)]="ordenrecojonuevo.distritoR">
+            <option [ngValue]="item" *ngFor="let item of distrito">
+              {{ item.distrito }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <br />
+    </form>
+  </div>
+  <div class="ordenentrega">
+    <form>
+      <div>
+        <u><h4>Orden de Entrega</h4></u>
+        <h5>Datos del Receptor</h5>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Recpetor</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar DNI"
+            id="ordenentrega"
+            [(ngModel)]="ordenentreganuevo.dniRec"
+            name="dniRec"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Receptor</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar Nombres completos"
+            id="ordenentrega"
+            [(ngModel)]="ordenentreganuevo.nomComplReceptor"
+            name="nomComplEmisor"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Receptor</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar Numero de celular"
+            id="ordenentrega"
+            [(ngModel)]="ordenentreganuevo.celularRec"
+            name="celularRec"
+          />
+        </div>
+
+        <h5>Datos de recojo</h5>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Recojo</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar direccion de recojo"
+            id="ordenentrega"
+            [(ngModel)]="ordenentreganuevo.direccionE"
+            name="direccionE"
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <label for="fecha recojo">Ingrese la fehca para el recojo: </label>
+          <input
+            type="date"
+            id="ordenentrega"
+            [(ngModel)]="ordenentreganuevo.fechaE"
+            name="fechaE"
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Distrito Entrega</span
+          >
+          <select name="id_tarifa" [(ngModel)]="ordenentreganuevo.distritoE">
+            <option [ngValue]="item" *ngFor="let item of distrito">
+              {{ item.distrito }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <br />
+    </form>
+
+    <div class="form-group" align="right">
+      <button
+        type="submit"
+        class="btn btn-outline-secondary"
+        (click)="crearOrdenServicio()"
+      >
+        crear
+      </button>
+    </div>
+  </div>
+
+  <div class="codigos">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default"
+        >Paquete</span
+      >
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default"
+        placeholder="Aquí aparecera el codigo de paquete"
+        id="id_paquete"
+        [(ngModel)]="mensajepaquete"
+        name="mensaje"
+        readonly
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default"
+        >Orden de Recojo</span
+      >
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default"
+        placeholder="Aquí aparecera el codigo de paquete"
+        id="id_paquete"
+        [(ngModel)]="mensajeordenrecojo"
+        name="mensaje"
+        readonly
+      />
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default"
+        >Orden de Entrega</span
+      >
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default"
+        placeholder="Aquí aparecera el codigo de paquete"
+        id="id_paquete"
+        [(ngModel)]="mensajeordenentrega"
+        name="mensaje"
+        readonly
+      />
+    </div>
+  </div>
+
+  <div class="detalleservicio">
+    <div>
+      <u><h4>Completar servicio</h4></u>
+      <h5>Ingresar los codigos de las ordenes creadas</h5>
+
+      <form>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Paquete Codigo</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar el codigo de la orden de recojo"
+            id="paquete"
+            [(ngModel)]="ordenrecojob.recojo_id"
+            name="descripcionpqt"
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default"
+            >Paquete Codigo</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Ingresar el codigo de la orden de entrega"
+            id="paquete"
+            [(ngModel)]="ordenentregab.entrega_id"
+            name="descripcionpqt"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="form-group" align="right">
+      <button
+        type="submit"
+        class="btn btn-outline-secondary"
+        (click)="crearDS()"
+      >
+        crear
+      </button>
+    </div>
+  </div>
+</div>

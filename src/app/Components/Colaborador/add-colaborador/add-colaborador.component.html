@@ -1,0 +1,83 @@
+<div style="width: 400px; margin: auto">
+  <h4>Nuevo Distrito</h4>
+
+  <form>
+    <div class="form-group">
+      <label for="Colaborador">DNI Colaborador:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dnicolaborador"
+        [(ngModel)]="Colaboradornuevo.dnicolaborador"
+        name="dnicolaborador"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="nombreC">Nombres y Apellidos:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombreC"
+        [(ngModel)]="Colaboradornuevo.nombreC"
+        name="nombreC"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="usuario">Nombre de Usuario: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="usuario"
+        [(ngModel)]="Colaboradornuevo.usuario"
+        name="usuario"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="contrasena">Contraseña: </label>
+      <input
+        type="password"
+        class="form-control"
+        id="contrasena"
+        [(ngModel)]="Colaboradornuevo.contrasena"
+        name="contrasena"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="tipo_colaborador">Rol</label>
+      <br />
+      <select name="tipo_colaborador" [(ngModel)]="Colaboradornuevo.tipo_colaborador">
+        <option [ngValue]="item" *ngFor="let item of tipocolaborador">
+          {{ item.tipo_colaborador }}
+        </option>
+      </select>
+    </div>
+
+  </form>
+  <br />
+  <div class="form-group" align="right">
+    <button
+      type="submit"
+      class="btn btn-outline-secondary"
+      (click)="crearColaborador()"
+    >
+      crear
+    </button>
+
+    <button
+      type="submit"
+      class="m-3 btn btn-outline-danger"
+      (click)="regresar()"
+    >
+      regresar
+    </button>
+  </div>
+
+  <p>{{ mensaje }}</p>
+
+  <div *ngIf="!Colaboradornuevo"></div>
+</div>
+

@@ -1,0 +1,92 @@
+<div style="width: 400px; margin: auto;">
+
+  <div *ngIf="ColaboradorActual"  class="edit-form">
+    <h4>Actualizar Colaborador</h4>
+    <form>
+
+      <div class="form-group">
+        <label for="Colaborador">DNI Colaborador:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="dnicolaborador"
+          [(ngModel)]="ColaboradorActual.dnicolaborador"
+          name="dnicolaborador"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="nombreC">Nombres y Apellidos:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nombreC"
+          [(ngModel)]="ColaboradorActual.nombreC"
+          name="nombreC"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="usuario">Nombre de Usuario: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="usuario"
+          [(ngModel)]="ColaboradorActual.usuario"
+          name="usuario"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="contrasena">Contraseña: </label>
+        <input
+          type="password"
+          class="form-control"
+          id="contrasena"
+          [(ngModel)]="ColaboradorActual.contrasena"
+          name="contrasena"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="tipo_colaborador">Rol</label>
+        <br />
+        <select name="tipo_colaborador" [(ngModel)]="ColaboradorActual.tipo_colaborador">
+          <option [ngValue]="item" *ngFor="let item of tipocolaborador">
+            {{ item.tipo_colaborador }}
+          </option>
+        </select>
+      </div>
+    </form>
+
+    <br>
+
+    <div>
+      <button
+      type="submit"
+      class="btn btn-success"
+      (click)="ActualizarColaborador()"
+      >
+        Actualizar
+      </button>
+
+      <button
+      type="submit"
+      class="btn btn-secondary"
+      style="margin-left: 5px;"
+      (click)="regresar()"
+      >
+        Regresar
+      </button>
+
+      <p>{{mensaje}}</p>
+    </div>
+
+    <div *ngIf="!ColaboradorActual">
+      <br>
+      <p>Accediendo al colaborador</p>
+    </div>
+
+  </div>
+
+<
