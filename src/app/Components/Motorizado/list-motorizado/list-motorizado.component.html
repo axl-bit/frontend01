@@ -37,7 +37,7 @@
           <tbody>
             <tr *ngFor="let moto of Motorizados">
               <td>{{moto.motorizado_id}}</td>
-              <td>{{moto.colaborador_id}}</td>
+              <td>{{moto.colaborador}}</td>
               <td>{{moto.codigoSoat}}</td>
               <td>{{moto.nroMatricula}}</td>
               <td>{{moto.ultimaRT}}</td>
@@ -54,7 +54,7 @@
           </tbody>
         </table>
         <div align="right">
-          <button class="btn btn-outline-success " type="button" [routerLink]="'/Motorizado/crear'">Nuevo distrito</button>
+          <button class="btn btn-outline-success " type="button" [routerLink]="'/Motorizado/crear'">Nuevo Motorizado</button>
         </div>
       </div>
     </div>

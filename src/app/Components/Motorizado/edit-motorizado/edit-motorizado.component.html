@@ -1,1 +1,87 @@
-<p>edit-motorizado works!</p>
+<div style="width: 500px; margin: auto" *ngIf="motoActual">
+
+  <h4>Nuevo Motorizado</h4>
+
+  <form>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default"
+        >Codigo de soat</span
+      >
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default"
+        placeholder="Ingresar el codigo de la orden de recojo"
+        id="motoActual"
+        [(ngModel)]="motoActual.codigoSoat"
+        name="codigoSoat"
+      />
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default"
+        >Ultima revicion tecnica</span
+      >
+      <input
+        type="date"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default"
+        id="ordenrecojo"
+        [(ngModel)]="motoActual.ultimaRT"
+        name="direccionR"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="id_provincia">Disponibilidad: </label>
+      <br />
+      <select
+        name="disponibilidad"
+        class="form-select"
+        [(ngModel)]="motoActual.disponibilidad"
+      >
+        <option [ngValue]="item" *ngFor="let item of disponibilidad">
+          {{ item.disponibilidad }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="id_provincia">Zona: </label>
+      <br />
+      <select
+        name="zona"
+        class="form-select"
+        [(ngModel)]="motoActual.zona"
+      >
+        <option [ngValue]="item" *ngFor="let item of zona">
+          {{ item.zona }}
+        </option>
+      </select>
+    </div>
+  </form>
+  <br />
+  <div class="form-group" align="right">
+    <button
+      type="submit"
+      class="btn btn-outline-secondary"
+      (click)="ActualizarMoto()"
+    >
+      crear
+    </button>
+
+    <button
+      type="submit"
+      class="m-3 btn btn-outline-danger"
+      (click)="regresar()"
+    >
+      regresar
+    </button>
+  </div>
+
+  <p>{{ mensaje }}</p>
+
+  <div *ngIf="!motoActual"></div>
+

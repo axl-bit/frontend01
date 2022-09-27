@@ -18,6 +18,8 @@ export class AddDistritoComponent implements OnInit {
   distritosnuevo: Distritos = new Distritos();
   tarifas: Tarifas[] | undefined;
   provincias: Provincia[] | undefined;
+
+
   respuesta!: RespuestaCommon;
   mensaje!: string;
 

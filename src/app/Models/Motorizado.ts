@@ -6,13 +6,13 @@ export class Motorizado{
   motorizado_id!:string;
   codigoSoat!:string;
   nroMatricula!:string;
-  ultimaRT!:string;
-  colaborador_id!:Colaborador;
+  ultimaRT!:Date;
+  colaborador!:Colaborador;
   disponibilidad!:Disponibilidad;
   zona!:Zona;
 
   constructor(){
-    this.colaborador_id = new Colaborador();
+    this.colaborador = new Colaborador();
     this.disponibilidad = new Disponibilidad();
     this.zona = new Zona();
   }
