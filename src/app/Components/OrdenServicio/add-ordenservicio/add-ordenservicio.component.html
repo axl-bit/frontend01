@@ -3,6 +3,58 @@
 <div class="container mt-2">
   <h1 align="center">SERVICIO DE COURIER</h1>
 
+  <div class="codigos">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default"
+        >Paquete</span
+      >
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default"
+        placeholder="Aquí aparecera el codigo de paquete"
+        id="id_paquete"
+        [(ngModel)]="mensajepaquete"
+        name="mensaje"
+        readonly
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default"
+        >Orden de Recojo</span
+      >
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default"
+        placeholder="Aquí aparecera el codigo de paquete"
+        id="id_paquete"
+        [(ngModel)]="mensajeordenrecojo"
+        name="mensaje"
+        readonly
+      />
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default"
+        >Orden de Entrega</span
+      >
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default"
+        placeholder="Aquí aparecera el codigo de paquete"
+        id="id_paquete"
+        [(ngModel)]="mensajeordenentrega"
+        name="mensaje"
+        readonly
+      />
+    </div>
+  </div>
+
   <div class="paquete">
     <form>
       <div>
@@ -286,57 +338,7 @@
     </div>
   </div>
 
-  <div class="codigos">
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="inputGroup-sizing-default"
-        >Paquete</span
-      >
-      <input
-        type="text"
-        class="form-control"
-        aria-label="Sizing example input"
-        aria-describedby="inputGroup-sizing-default"
-        placeholder="Aquí aparecera el codigo de paquete"
-        id="id_paquete"
-        [(ngModel)]="mensajepaquete"
-        name="mensaje"
-        readonly
-      />
-    </div>
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="inputGroup-sizing-default"
-        >Orden de Recojo</span
-      >
-      <input
-        type="text"
-        class="form-control"
-        aria-label="Sizing example input"
-        aria-describedby="inputGroup-sizing-default"
-        placeholder="Aquí aparecera el codigo de paquete"
-        id="id_paquete"
-        [(ngModel)]="mensajeordenrecojo"
-        name="mensaje"
-        readonly
-      />
-    </div>
 
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="inputGroup-sizing-default"
-        >Orden de Entrega</span
-      >
-      <input
-        type="text"
-        class="form-control"
-        aria-label="Sizing example input"
-        aria-describedby="inputGroup-sizing-default"
-        placeholder="Aquí aparecera el codigo de paquete"
-        id="id_paquete"
-        [(ngModel)]="mensajeordenentrega"
-        name="mensaje"
-        readonly
-      />
-    </div>
-  </div>
 
   <div class="detalleservicio">
     <div>

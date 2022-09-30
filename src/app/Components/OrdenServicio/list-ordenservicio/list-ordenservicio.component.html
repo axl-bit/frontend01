@@ -38,7 +38,7 @@
             <tr *ngFor="let ds of DetalleServiocios ">
               <td>{{ds.detalleservicio_id}}</td>
               <td>{{ds.ordenrecojo.recojo_id}}</td>
-              <td>{{ds.ordenentrega.entrega_id + " - " + ds.ordenentrega.dniRec + " - " + ds.ordenentrega.nomComplReceptor}}</td>
+              <td>{{ds.ordenrecojo.recojo_id + " - " + ds.ordenrecojo.dniEm + " - " + ds.ordenrecojo.nomComplEmisor}}</td>
               <td>{{ds.ordenentrega.entrega_id}}</td>
               <td>{{ds.ordenentrega.entrega_id + " - " + ds.ordenentrega.dniRec + " - " + ds.ordenentrega.nomComplReceptor}}</td>
               <td>{{ds.ordenentrega.paquete.paquete_id}}</td>

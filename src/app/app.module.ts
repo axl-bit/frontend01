@@ -49,9 +49,22 @@ import { EditColaboradorComponent } from './Components/Colaborador/edit-colabora
 import { ListOrdenservicioComponent } from './Components/OrdenServicio/list-ordenservicio/list-ordenservicio.component';
 import { AddOrdenservicioComponent } from './Components/OrdenServicio/add-ordenservicio/add-ordenservicio.component';
 import { EditOrdenservicioComponent } from './Components/OrdenServicio/edit-ordenservicio/edit-ordenservicio.component';
+
+//Motorizado
 import { AddMotorizadoComponent } from './Components/Motorizado/add-motorizado/add-motorizado.component';
 import { ListMotorizadoComponent } from './Components/Motorizado/list-motorizado/list-motorizado.component';
 import { EditMotorizadoComponent } from './Components/Motorizado/edit-motorizado/edit-motorizado.component';
+
+//Orden Entrega
+import { ListOrdenentregaComponent } from './Components/OrdenEntrega/list-ordenentrega/list-ordenentrega.component';
+import { EditOrdenentregaComponent } from './Components/OrdenEntrega/edit-ordenentrega/edit-ordenentrega.component';
+
+//OrdenRecojo
+import { ListOrdenrecojoComponent } from './Components/OrdenRecojo/list-ordenrecojo/list-ordenrecojo.component';
+import { EditOrdenrecojoComponent } from './Components/OrdenRecojo/edit-ordenrecojo/edit-ordenrecojo.component';
+
+//automatizado
+import { AddOrdenservicioautomatizadoComponent } from './Components/OrdenServicio/add-ordenservicioautomatizado/add-ordenservicioautomatizado.component';
 
 
 
@@ -84,6 +97,11 @@ import { EditMotorizadoComponent } from './Components/Motorizado/edit-motorizado
     AddMotorizadoComponent,
     ListMotorizadoComponent,
     EditMotorizadoComponent,
+    ListOrdenentregaComponent,
+    EditOrdenentregaComponent,
+    ListOrdenrecojoComponent,
+    EditOrdenrecojoComponent,
+    AddOrdenservicioautomatizadoComponent,
   ],
   imports: [
     BrowserModule,

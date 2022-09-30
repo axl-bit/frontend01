@@ -1,14 +1,21 @@
 <div id="app">
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <nav class="navbar navbar-expand navbar-dark bg-dark " >
     <a href="#" class="navbar-brand" [routerLink]="'/Inicio'">Pmmcourier</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item" *ngIf="!isLoggedIn">
         <a href="#" class="nav-link" [routerLink]="'/Tarifario'">Tarifario </a>
       </li>
+      <!--
       <li class="nav-item" *ngIf="!isLoggedIn">
-        <!--*ngIf="showAdminBoard"-->
         <a href="#" class="nav-link" [routerLink]="'/OrdenServicio/crear'">Servicio</a>
       </li>
+      -->
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <a href="#" class="nav-link" [routerLink]="'/automatizado/crear'">Servicio</a>
+      </li>
+
+
+
 
       <li class="nav-item" *ngIf="isLoggedIn">
         <!--*ngIf="showAdminBoard"-->
@@ -29,6 +36,14 @@
       <li class="nav-item" *ngIf="isLoggedIn">
         <!--*ngIf="showAdminBoard"-->
         <a href="#" class="nav-link" [routerLink]="'/OrdenServicio'">Ordenes de Servicio</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <!--*ngIf="showAdminBoard"-->
+        <a href="#" class="nav-link" [routerLink]="'/OrdenRecojo'">Ordenes de Recojo</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <!--*ngIf="showAdminBoard"-->
+        <a href="#" class="nav-link" [routerLink]="'/OrdenEntrega'">Ordenes de Entrega</a>
       </li>
     </ul>
 

@@ -1,0 +1,46 @@
+.paquete{
+
+  background-color: blanchedalmond;
+  height: 300px;
+  width: 500px;
+
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  float: centar;
+}
+
+.ordenrecojo{
+  background-color: blanchedalmond;
+
+  height: 480px;
+  width: 640px;
+
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  float: left;
+}
+
+
+
+.ordenentrega{
+  background-color: blanchedalmond;
+  height: 500px;
+  width: 640px;
+
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  float: right;
+}
+
+.alerta{
+  position: fixed;
+  max-width: auto;
+  top: 55px;
+  right: 24px;
+}
+

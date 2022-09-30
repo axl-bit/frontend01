@@ -1,0 +1,254 @@
+.row .col {
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0.75rem;
+  min-height: 1px;
+}
+
+
+@media only screen and (min-width: 993px) {
+  .row .col.l5 {
+      width: 41.6666666667%;
+      margin-left: auto;
+      left: auto;
+      right: auto;
+  }
+
+  .row .col.l6 {
+      width: 50%;
+      margin-left: auto;
+      left: auto;
+      right: auto;
+  }
+
+  .row .col.offset-l1 {
+      margin-left: 8.3333333333%;
+  }
+}
+
+ul {
+  margin: 0px;
+}
+
+ul li {
+  font-size: 16px;
+  list-style-type: disc;
+  font-weight: 100;
+}
+
+.container__fluid {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+@media screen and (max-width: 768px) {
+  .container__fluid {
+      width: 90%;
+  }
+}
+
+.c-section {
+  position: relative;
+  padding-top: 4.1em;
+  padding-bottom: 4.1em;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .c-section {
+      padding-top: 2em;
+      padding-bottom: 2em;
+  }
+}
+
+.c-section h2 {
+  font-size: 28px;
+  font-weight: 100;
+  margin-bottom: 20px;
+  line-height: 35px;
+  margin-top: 0px;
+  text-align: center;
+  font-family: 'Carnas-Light';
+  font-weight: 300;
+  font-style: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .c-section h2 {
+      font-size: 40px;
+      line-height: 50px;
+      text-align: left;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .c-section h2 {
+      font-size: 40px;
+      line-height: 50px;
+      text-align: left;
+  }
+}
+
+.c-section__paragraph {
+  font-size: 17px;
+  text-align: left;
+  line-height: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  .c-section__paragraph {
+      font-size: 15px;
+      font-weight: 100;
+      margin-bottom: 1em;
+      line-height: 21px;
+  }
+}
+
+.c-section--curveFooter .title {
+  font-size: 36px;
+  line-height: 45px;
+  font-family: 'Carnas-Bold' !important;
+  font-style: normal;
+  font-display: swap;
+}
+
+.c-section__img {
+  position: relative;
+  z-index: 98;
+}
+
+.c-section__list ul li {
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .c-section__list ul li {
+      margin-bottom: 1em;
+  }
+}
+
+.c-section__list ul li .order-list {
+  position: absolute;
+  background: #56ebff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  left: 0;
+  top: 0.5em;
+  margin: auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 767px) {
+  .c-section__list ul li .order-list {
+      width: 50px;
+      height: 50px;
+      font-size: 29px;
+      top: 0.1em;
+  }
+}
+
+.c-section__list ul li .order-information {
+  margin-left: 40px;
+  min-height: 60px;
+}
+
+@media (min-width: 768px) {
+  .c-section__list ul li .order-information {
+      margin-left: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .c-section__list ul li .order-information {
+      min-height: 48px;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.c-content--plataform {
+  padding: 3em 2em;
+  margin-top: 20px;
+  position: relative;
+  z-index: 99;
+  background: rgb(184, 188, 192);
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .c-content--plataform {
+      padding: 3em;
+      margin-top: 0px;
+  }
+}
+
+.c-content--curved {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  width: 100%;
+  z-index: 95px;
+}
+
+.c-content-vertical-align {
+  display: flex !important;
+  align-items: center;
+}
+
+.c-img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.c-img-width {
+  width: 100%;
+  margin: auto;
+}
+
+/*************ESTILO DEL IPAD************************/
+.ipad {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: 'SF Pro Display', Helvetica Neue, Arial, sans-serif;
+  letter-spacing: -0.022em;
+  font-size: 2.5vmin;
+  text-shadow: 0 0 0.5em #000;
+  background-color: #000;
+  background-size: auto 200%, cover;
+  background-repeat: no-repeat, no-repeat;
+  border: solid #111;
+  margin-bottom: 2em;
+  position: relative;
+  box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 0.5px #000 inset;
+  transition: all 0.1s linear, line-height 0s linear;
+  background-position: 50% 100%, center;
+  transform-origin: bottom center;
+}
+
+.ipad {
+  margin-left: 2em;
+  height: 85.8vmin;
+  width: 60vmin;
+  line-height: 85.8vmin;
+  border-width: 3vmin;
+  border-radius: 4.2857142857vmin;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #111), url("/imagenes/ipadPMM.png");
+  z-index: 100;
+}

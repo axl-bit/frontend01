@@ -103,7 +103,7 @@ export class AddOrdenservicioComponent implements OnInit {
       this.ordenrecojonuevo.paquete = data;
 
       //añadimos los datos del motorizado a la orden de recojo
-      this.ordenrecojonuevo.motorizado_id === null;
+      this.ordenrecojonuevo.motorizadorecojo === null;
 
       //procedemos a crear la orden de recojo con todos los datos
       console.log('Invocando servicio para crear una orden de recojo');
@@ -126,7 +126,7 @@ export class AddOrdenservicioComponent implements OnInit {
       this.ordenentreganuevo.paquete = data;
 
       //añadimos los datos del motorizado a la orden de entrega
-      this.ordenentreganuevo.motorizado_id === null;
+      this.ordenentreganuevo.motorizadoentrega === null;
 
       //procedemos a crear la orden de entrega con todos los datos
       console.log('Invocando servicio para crear una orden de recojo');

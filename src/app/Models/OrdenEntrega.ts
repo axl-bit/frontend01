@@ -10,13 +10,13 @@ export class Ordenentrega{
   fechaE!:Date;
   direccionE!:string;
   distritoE!:Distritos;
-  motorizado_id!:Motorizado;
+  motorizadoentrega!:Motorizado;
   paquete!:Paquete;
 
   constructor(){
 
     this.distritoE = new Distritos();
-    this.motorizado_id = new Motorizado();
+    this.motorizadoentrega = new Motorizado();
     this.paquete = new Paquete();
 
   }

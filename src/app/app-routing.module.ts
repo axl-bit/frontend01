@@ -10,7 +10,12 @@ import { LoginComponent } from './Components/Login/login.component';
 import { AddMotorizadoComponent } from './Components/Motorizado/add-motorizado/add-motorizado.component';
 import { EditMotorizadoComponent } from './Components/Motorizado/edit-motorizado/edit-motorizado.component';
 import { ListMotorizadoComponent } from './Components/Motorizado/list-motorizado/list-motorizado.component';
+import { EditOrdenentregaComponent } from './Components/OrdenEntrega/edit-ordenentrega/edit-ordenentrega.component';
+import { ListOrdenentregaComponent } from './Components/OrdenEntrega/list-ordenentrega/list-ordenentrega.component';
+import { EditOrdenrecojoComponent } from './Components/OrdenRecojo/edit-ordenrecojo/edit-ordenrecojo.component';
+import { ListOrdenrecojoComponent } from './Components/OrdenRecojo/list-ordenrecojo/list-ordenrecojo.component';
 import { AddOrdenservicioComponent } from './Components/OrdenServicio/add-ordenservicio/add-ordenservicio.component';
+import { AddOrdenservicioautomatizadoComponent } from './Components/OrdenServicio/add-ordenservicioautomatizado/add-ordenservicioautomatizado.component';
 import { EditOrdenservicioComponent } from './Components/OrdenServicio/edit-ordenservicio/edit-ordenservicio.component';
 import { ListOrdenservicioComponent } from './Components/OrdenServicio/list-ordenservicio/list-ordenservicio.component';
 import { PagInicioComponent } from './Components/pag-inicio/pag-inicio.component';
@@ -55,10 +60,21 @@ const routes: Routes = [
   {path: 'Motorizado/crear', component: AddMotorizadoComponent},
   {path: 'Motorizado/actualizar/:id', component: EditMotorizadoComponent},
 
+  //OrdenRecojo
+  {path: 'OrdenRecojo', component: ListOrdenrecojoComponent},
+  {path: 'OrdenRecojo/actualizar/:id', component: EditOrdenrecojoComponent},
+
+  //OrdenEntrega
+  {path: 'OrdenEntrega', component: ListOrdenentregaComponent},
+  {path: 'OrdenEntrega/actualizar/:id', component: EditOrdenentregaComponent},
+
   //OrdenServicio
   {path: 'OrdenServicio', component: ListOrdenservicioComponent},
   {path: 'OrdenServicio/crear', component: AddOrdenservicioComponent},
   {path: 'OrdenServicio/actualizar/:id', component: EditOrdenservicioComponent},
+
+  //servicio Automatizado
+  {path: 'automatizado/crear', component: AddOrdenservicioautomatizadoComponent},
 
 
 

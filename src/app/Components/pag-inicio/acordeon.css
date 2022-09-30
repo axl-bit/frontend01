@@ -1,0 +1,80 @@
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+.ul-acordeon {
+	list-style: none;
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+.ul-acordeon li {
+	float: left;
+	width: 16.666%;
+	height: 600px;
+	opacity: 0.4;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.ul-acordeon li:hover,
+ul li:first-child~li:last-child {
+	width: 55ch;
+	opacity: 1;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.ul-acordeon li:hover~li:last-child {
+	width: 16.666%;
+	opacity: 0.4;
+}
+
+.ul-acordeon li:nth-child(1) {
+	background: url("https://scontent.flim29-1.fna.fbcdn.net/v/t39.30808-6/242100926_639648384106693_3705227563689920150_n.png?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGL0FuIuciYkOWY2uZevPl78qcGtDw2dmHypwa0PDZ2YeUF0hyDl2sjkb0iVH8awTmNQMROy_ECEvXKYR8V3jiG&_nc_ohc=Jr4UpkLuCU8AX9SeSvm&_nc_ht=scontent.flim29-1.fna&oh=00_AT9o5FohKTlsCYAdd2TQThsZAFgvSAAhkXS6i9tbsSExDg&oe=632542A8") top center no-repeat;
+}
+
+.ul-acordeon li:nth-child(2) {
+	background: url("/imagenes/acordeon1.png") top right no-repeat;
+}
+
+.ul-acordeon li:nth-child(3) {
+	background: url("/imagenes/acordeon2.png") top center no-repeat;
+}
+
+.ul-acordeon li:nth-child(4) {
+	background: url("/imagenes/acordeon3.png") top center no-repeat;
+}
+
+/** Add cool filter efects
+.ul-acordeon li::before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 100%;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.ul-acordeon li:nth-child(1)::before {
+	background-color: rgba(255, 87, 34, .2);
+}
+
+.ul-acordeon li:nth-child(2)::before {
+	background-color: rgba(76, 175, 80, .25);
+}
+
+.ul-acordeon li:nth-child(3)::before {
+	background-color: rgba(33, 150, 243, .25);
+}
+
+.ul-acordeon li:nth-child(4)::before {
+	background-color: rgba(156, 39, 176, .2);
+}**/

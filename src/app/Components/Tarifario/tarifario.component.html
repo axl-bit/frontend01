@@ -1,36 +1,54 @@
 <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  <script src="Script.js"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+    crossorigin="anonymous"
+  />
+  <script src="Script.js"></script>
   <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="tarifario.component.css"/>
-  </head>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" type="text/css" href="tarifario.component.css" />
+</head>
 
 <!--llamando al componente de barra-->
 <app-barra></app-barra>
 
-  <div class="table-wrapper">
-    <h1 class="table-spanner" id="table-header">
-      <span><b>Distritos y sus tarifas</b></span>
-    </h1>
-    <div class="table" role="table" aria-labelledby="table-header">
-
-      <div class="thead" role="rowgroup">
-        <div class="tr">
-          <div class="td" role="columnheader">Distrito</div>
-				<div class="td" role="columnheader">Tarifa</div>
-			</div>
+<div class="item">
+  <div class="table-wrapper" style="float: left;">
+  <h1 class="table-spanner" id="table-header">
+    <span><b>Distritos y sus tarifas</b></span>
+  </h1>
+  <div class="table" role="table" aria-labelledby="table-header">
+    <div class="thead" role="rowgroup">
+      <div class="tr">
+        <div class="td" role="columnheader">Provincia</div>
+        <div class="td" role="columnheader">Distrito</div>
+        <div class="td" role="columnheader">Tarifa</div>
+      </div>
     </div>
-		<div class="tbody" role="rowgroup">
+    <div class="tbody" role="rowgroup">
       <div class="tr" role="row" *ngFor="let dis of Distritos">
+        <div class="td">{{ dis.provincia.provincia }}</div>
         <div class="td">{{ dis.distrito }}</div>
         <div class="td">{{ dis.tarifa.tarifa }}</div>
       </div>
+    </div>
   </div>
+</div>
+</div>
 
-  <div class="item">
+<div class="item">
     <!-- google-maps-demo.component.html -->
     <google-map
       height="400px"
@@ -42,9 +60,7 @@
     >
     </google-map>
   </div>
-</div>
-
-<!--
+  <!--
 <div class="container mt-5">
   <div class="item">
     <h1>Distritos y sus tarifas</h1>
@@ -80,3 +96,4 @@
     </google-map>
   </div>
 </div>-->
+
